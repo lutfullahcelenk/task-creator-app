@@ -1,8 +1,8 @@
 import React from 'react';
 
-function TaskItem({task ,onDelete}) {
+function TaskItem({task ,onDelete ,toggleDone}) {
     return (
-        <div className="task">
+        <div className={`task ${task.isDone ? "done" : ""}`} onDoubleClick={() =>toggleDone(task.id)}>
             <h3>
                 {task.text}
                 <button 
