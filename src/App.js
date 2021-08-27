@@ -25,6 +25,8 @@ function App() {
         setTasks(tasks.filter((task) => task.id !== id))
     }
 
+    //toggleDone
+
     return (
         <div className="container">
 
@@ -36,10 +38,9 @@ function App() {
 
             {isTaskBarShowed? <CreateTask onCreate={onCreate} /> : null}
 
-            <Tasks 
-                tasks= {tasks}
-                onDelete={onDelete}
-            />
+           
+            {tasks.length>0 ? (<Tasks tasks= {tasks} onDelete={onDelete}   />) : <p>No Task to Show</p> }
+           
 
         </div>
     )
