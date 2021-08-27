@@ -1,15 +1,16 @@
 import React from 'react';
 import Button from './Button';
 
-function Header({title}) {
+function Header({title ,toggleShow, isTaskBarShowed}) {
     return (
         <header className="header">
 
             <h1> {title} </h1>
 
             <Button 
-                text = {"Show Create a Task Bar"}
-                color = "purple"
+                text = {isTaskBarShowed? "Hide Create a Task Bar" : "Show Create a Task Bar"}
+                color = {isTaskBarShowed? "steelblue" : "purple"}
+                toggleShow={toggleShow}
                 />
 
         </header>
