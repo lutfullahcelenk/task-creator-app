@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ReactProject-TaskCreator/static/css/main.4eac2eb0.chunk.css",
+    "main.js": "/ReactProject-TaskCreator/static/js/main.d316d2ec.chunk.js",
+    "main.js.map": "/ReactProject-TaskCreator/static/js/main.d316d2ec.chunk.js.map",
+    "runtime-main.js": "/ReactProject-TaskCreator/static/js/runtime-main.df9d3df3.js",
+    "runtime-main.js.map": "/ReactProject-TaskCreator/static/js/runtime-main.df9d3df3.js.map",
+    "static/js/2.9ec17e62.chunk.js": "/ReactProject-TaskCreator/static/js/2.9ec17e62.chunk.js",
+    "static/js/2.9ec17e62.chunk.js.map": "/ReactProject-TaskCreator/static/js/2.9ec17e62.chunk.js.map",
+    "index.html": "/ReactProject-TaskCreator/index.html",
+    "static/css/main.4eac2eb0.chunk.css.map": "/ReactProject-TaskCreator/static/css/main.4eac2eb0.chunk.css.map",
+    "static/js/2.9ec17e62.chunk.js.LICENSE.txt": "/ReactProject-TaskCreator/static/js/2.9ec17e62.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df9d3df3.js",
+    "static/js/2.9ec17e62.chunk.js",
+    "static/css/main.4eac2eb0.chunk.css",
+    "static/js/main.d316d2ec.chunk.js"
+  ]
+}
