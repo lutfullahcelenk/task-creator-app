@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function CreateTask() {
+function CreateTask({onCreate}) {
   const [text, setText] = useState("");
   const [day, setDay] = useState("");
 
@@ -12,7 +12,7 @@ function CreateTask() {
       if(!text || !day){
           alert("Please fill both fields")
       }else{
-          
+          onCreate({text,day, isDone:false})
           setText("")
           setDay("")
       }
@@ -24,6 +24,7 @@ function CreateTask() {
         <div className="form-control">
           <label htmlFor="task">Task</label>
           <input
+            placeholder="Write a Task"
             id="task"
             name="text"
             type="text" 
@@ -34,6 +35,7 @@ function CreateTask() {
         <div className="form-control">
           <label htmlFor="day">Day & Time</label>
           <input
+            placeholder="Enter a Date and Time"
             id="day"
             name="day"
             type="text" 
