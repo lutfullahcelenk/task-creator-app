@@ -8,14 +8,22 @@ import {initialState} from "./store/initialStates";
 function App() {
 
     const [tasks,setTasks] = useState(initialState)
-    const [isTaskBarShowed,setIsTaskBarShowed] = useState(false)
+    const [isTaskBarShowed,setIsTaskBarShowed] = useState(true)
 
     //Show and Hide TaskBar
     const toggleShow = () => setIsTaskBarShowed(!isTaskBarShowed)
 
     //create a Task
-    
+    const onCreate = (task) => {
+        const id = Date.now()
+        const newTask = {id,...task}
+        setTasks((prevState) => [...prevState,newTask])
+    }
 
+    //delete Task
+    const onDelete = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
 
     return (
         <div className="container">
@@ -26,10 +34,11 @@ function App() {
                 isTaskBarShowed= {isTaskBarShowed}    
             />
 
-            {isTaskBarShowed? <CreateTask /> : null}
+            {isTaskBarShowed? <CreateTask onCreate={onCreate} /> : null}
 
             <Tasks 
                 tasks= {tasks}
+                onDelete={onDelete}
             />
 
         </div>
