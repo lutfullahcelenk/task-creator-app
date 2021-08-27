@@ -26,6 +26,13 @@ function App() {
     }
 
     //toggleDone
+    const toggleDone = (id) => {
+        setTasks(
+            tasks.map((task) => 
+                task.id === id ? {...task, isDone : !task.isDone} : task
+            )
+        )
+    }
 
     return (
         <div className="container">
@@ -39,7 +46,7 @@ function App() {
             {isTaskBarShowed? <CreateTask onCreate={onCreate} /> : null}
 
            
-            {tasks.length>0 ? (<Tasks tasks= {tasks} onDelete={onDelete}   />) : <p>No Task to Show</p> }
+            {tasks.length>0 ? (<Tasks tasks= {tasks} onDelete={onDelete} toggleDone={toggleDone}  />) : <p>No Task to Show</p> }
            
 
         </div>
