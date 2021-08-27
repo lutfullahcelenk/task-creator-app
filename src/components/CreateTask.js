@@ -7,9 +7,20 @@ function CreateTask() {
   const handleTextChange = (e) => {setText(e.target.value)}
   const handleDayChange = (e) => {setDay(e.target.value)}
 
+  const onSubmit = (e) => {
+      e.preventDefault()
+      if(!text || !day){
+          alert("Please fill both fields")
+      }else{
+          
+          setText("")
+          setDay("")
+      }
+  }
+
   return (
     <div>
-      <form className="add-form">
+      <form className="add-form" onSubmit={onSubmit}>
         <div className="form-control">
           <label htmlFor="task">Task</label>
           <input
