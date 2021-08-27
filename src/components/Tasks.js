@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function Tasks() {
+function Tasks({tasks}) {
     return (
         <div>
-            
+            {tasks.map((task) => {
+                return task.text
+            })}
         </div>
     )
 }
