@@ -1,11 +1,11 @@
 import React from 'react';
 import TaskItem from './TaskItem';
 
-function Tasks({tasks}) {
+function Tasks({tasks ,onDelete}) {
     return (
         <div>
             {tasks.map((task) => {
-                return <TaskItem key={task.id} task={task}
+                return <TaskItem key={task.id} task={task} onDelete={onDelete}
                 />
             })}
         </div>
